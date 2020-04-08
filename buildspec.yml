@@ -16,4 +16,4 @@ phases:
       - zip -r resources.zip .
   post_build:
     commands:
-      - aws s3 cp resources.zip s3://codebuild-test/release --acl private
+      - aws s3 cp resources.zip s3://codebuild-test-impara8/release --acl private
