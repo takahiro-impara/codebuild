@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - pip install pipenv
+  pre_build:
+    commands:
+      - pipenv install --dev
+      - export VENV_HOME_DIR=$(pipenv --venv)
+      - . $VENV_HOME_DIR/bin/activate
+      - pytest
+  build:
+    commands:
+      - zip -r resources.zip .
+  post_build:
+    commands:
+      - aws s3 cp resources.zip s3://codebuild-test/release --acl private
