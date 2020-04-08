@@ -11,8 +11,6 @@ phases:
       - pipenv install --dev
       - export VENV_HOME_DIR=$(pipenv --venv)
       - . $VENV_HOME_DIR/bin/activate
-      - flake8
-      - pytest
   build:
     commands:
       - zip -r resources.zip .
