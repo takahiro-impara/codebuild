@@ -1,0 +1,11 @@
+{
+    "NetworkInterfaces": [{
+        "AssociatePublicIpAddress": true,
+	      "DeleteOnTermination": true,
+        "DeviceIndex": 0
+     }],
+    "ImageId": "ami-0f310fced6141e627",
+    "InstanceType": "t1.micro",
+    "KeyName": "study6-keypair",
+    "UserData": "IyEvdXNyL2Jpbi9iYXNoCgpvdXRmaWxlPS9ob21lL2VjMi11c2VyL3d3dy9pbmRleC5odG1sCgpta2RpciAvaG9tZS9lYzItdXNlci93d3cKCmVjaG8gIjxodG1sPiIgPiAke291dGZpbGV9CmVjaG8gIiAgPGJvZHk+ICIgPj4gJHtvdXRmaWxlfQplY2hvIC1uICIgICAgRUMyICIgPj4gJHtvdXRmaWxlfQplY2hvICRIT1NUTkFNRSB8IGN1dCAtZjEgLWQuIHwgY3V0IC1mMi01IC1kLSA+PiAke291dGZpbGV9CmVjaG8gIiAgPC9ib2R5PiIgPj4gJHtvdXRmaWxlfQplY2hvICI8L2h0bWw+IiA+PiAke291dGZpbGV9CgpjZCAvaG9tZS9lYzItdXNlci93d3cKbm9odXAgcHl0aG9uIC1tIFNpbXBsZUhUVFBTZXJ2ZXIgODAgJgplY2hvICJAcmVib290IGNkIC9ob21lL2VjMi11c2VyL3d3dztub2h1cCBweXRob24gLW0gU2ltcGxlSFRUUFNlcnZlciA4MCAmIiB8IGNyb250YWIK"
+}

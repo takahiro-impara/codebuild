@@ -1,0 +1,20 @@
+{
+    "AlarmName": "NetworkPacketInOver30",
+    "AlarmDescription": "AutoScaling Test",
+    "AlarmActions": [
+    "arn:aws:autoscaling:ap-northeast-1:003768675918:scalingPolicy:61aa1a4b-2b7c-44b2-abfe-e53ec27929e8:autoScalingGroupName/TestGroup:policyName/mystep-scalein-policy"
+    ],
+    "MetricName": "NetworkPacketsIn",
+    "Namespace": "AWS/EC2",
+    "Statistic": "Average",
+    "Dimensions": [
+        {
+            "Name": "AutoScalingGroupName",
+            "Value": "TestGroup"
+        }
+    ],
+    "Period": 300,
+    "EvaluationPeriods": 1,
+    "Threshold": 30,
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold"
+}

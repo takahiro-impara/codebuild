@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+outfile=/home/ec2-user/www/index.html
+
+mkdir /home/ec2-user/www
+
+echo "<html>" > ${outfile}
+echo "  <body> " >> ${outfile}
+echo -n "    EC2 " >> ${outfile}
+echo $HOSTNAME | cut -f1 -d. | cut -f2-5 -d- >> ${outfile}
+echo "  </body>" >> ${outfile}
+echo "</html>" >> ${outfile}
+
+cd /home/ec2-user/www
+nohup python -m SimpleHTTPServer 80 &
+echo "@reboot cd /home/ec2-user/www;nohup python -m SimpleHTTPServer 80 &" | crontab

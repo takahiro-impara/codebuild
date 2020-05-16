@@ -1,0 +1,9 @@
+{
+    "AutoScalingGroupName": "TestGroup",
+    "LaunchTemplate": {
+        "LaunchTemplateId": "lt-022a7d42ef6f3cc4c"
+    },
+    "MinSize": 1,
+    "MaxSize": 2,
+    "VPCZoneIdentifier": "subnet-05518ead82e651919,subnet-072d51c7afef0c79e"
+}
